@@ -1,215 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Main_CSS_file -->
-    <link rel="stylesheet" href="styles.css">
     <title>Technical Documentation Page</title>
-    <!-- Google_Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Start_Navbar -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="main-header">
     <nav id="navbar">
-        <header>HTML Documentation</header>
-        <ul>
-            <li><a class="nav-link" href="#introduction">Introduction</a></li>
-            <li><a class="nav-link" href="#what_is_html?">What is HTML?</a></li>
-            <li><a class="nav-link" href="#anatomy_of_an_html_element">Anatomy of an HTML element</a></li>
-            <li><a class="nav-link" href="#html_document">HTML document</a></li>
-            <li><a class="nav-link" href="#headings">Headings</a></li>
-            <li><a class="nav-link" href="#paragraphs">Paragraphs</a></li>
-            <li><a class="nav-link" href="#lists">Lists</a></li>
-            <li><a class="nav-link" href="#links">Links</a></li>
-            <li><a class="nav-link" href="#reference">Reference</a></li>
-        </ul>
+      <h1><header>JS Documentation</header></h1>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+        <li><a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a></li>
+        <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+        <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+        <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+        <li><a class="nav-link" href="#Constants">Constants</a></li>
+        <li><a class="nav-link" href="#Data_types">Data types</a></li>
+        <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>
+        <li><a class="nav-link" href="#while_statement">while statement</a></li>
+        <li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
     </nav>
-    <!-- End_Navbar  -->
+  </header>
     <main id="main-doc">
-        <!-- Start_Introduction_Section -->
-        <section class="main-section" id="introduction">
-            <header>Introduction</header>
-            <p>HTML (Hypertext Markup Language) is the code that is used to structure a web page and its content. 
-                For example, content could be structured within a set of paragraphs, a list of bulleted points, 
-                or using images and data tables. As the title suggests, this article will give you a basic understanding 
-                of HTML and its functions.
-            </p>
-        </section>
-        <!-- End_Introduction_Section -->
-        <!-- Start_What_is_html_section -->
-        <section class="main-section" id="what_is_html?">
-            <header>What is HTML?</header>
-            <p>HTML is a markup language that defines the structure of your content.
-                HTML consists of a series of elements, which you use to enclose, or wrap different parts of the 
-                content to make it appear a certain way. The enclosing tags can make a word or image hyperlink 
-                to somewhere else, can italicize words, can make the font bigger or smaller, and so on. For example, 
-                take the following line of content:</p>
-            <code>My cat is very grumpy</code>
-            <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in 
-                paragraph tags:</p>
-            <code><span class="tag-name">&lt;p&gt;</span>My cat is very grumpy<span class="tag-name">&lt;/p&gt;</span></code>
-        </section>
-        <!-- End_What_is_html_section -->
-        <!-- Start_Anatomy_of_an_html_element_section -->
-        <section class="main-section" id="anatomy_of_an_html_element">
-            <header>Anatomy of an HTML element</header>
-            <p>Let's explore this paragraph element a bit further.</p>
-            <code><span class="tag-name">&lt;p&gt;</span>My cat is very grumpy<span class="tag-name">&lt;/p&gt;</span></code>
-            <p>HTML element consists of main parts are as follows:</p>
-            <ol>
-                <li><strong>The opening tag:</strong> This consists of the name of the element (in this case, p), 
-                wrapped in opening and closing <strong>angle brackets</strong>. This states where the element 
-                begins or starts to take effect, in this case where the paragraph begins.</li>
-                <li><strong>The closing tag:</strong> This is the same as the opening tag, except that it includes 
-                a forward slash before the element name. This states where the element ends, in this case 
-                where the paragraph ends. Failing to add a closing tag is one of the standard beginner errors 
-                and can lead to strange results.</li>
-                <li><strong>The content:</strong> Is the content of the element, which in our case is just text.</li>
-                <li><strong>The element:</strong> The opening tag, the closing tag, and the content together 
-                comprise the element.</li>
-            </ol>
-            <p>HTML elements can also have attributes that look like the following:</p>
-            <code><span class="tag-name">&lt;p <span class="attr-name">class="editor-note"</span>&gt;</span>My cat is very grumpy<span class="tag-name">&lt;&sol;p&gt;</span></code>
-            <p>Attributes contain extra information about the element that you don't want to appear in the actual 
-                content. Here, <strong>class</strong> is the attribute name and <strong>editor-note</strong> is the attribute value. 
-                The <strong>class</strong> attribute allows you to give the element a non-unique identifier that can be used to 
-                target it (and any other elements with the same <strong>class</strong> value) with style information and other things.</p>
-            <p>An attribute should always have the following:</p>
-            <ul>
-                <li>A space between it and the element name (or the previous attribute, if the element already has one or more attributes).</li>
-                <li>The attribute name followed by an equal sign.</li>
-                <li>The attribute value wrapped by opening and closing quotation marks.</li>
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article class="main-article">
+          <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+          <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+          <ul>
+            <li>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
+            <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header><article class="main-article">
+        <p>This guide assumes you have the following basic background:</p>
+        <ul>
+          <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+          <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
+          </ul>
+          </article>
+      </section>
+
+      <section class="main-section" id="JavaScript_and_Java">
+        <header>JavaScript and Java</header><article class="main-article">
+          <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+          <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+          <p>JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
+          </article>
+      </section>
+
+      <section class="main-section" id="Hello_world">
+        <header>Hello world</header><article class="main-article">
+          <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
+          <code>function greetMe(yourName) { alert("Hello " + yourName); }
+greetMe("World");</code>
+          <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
+          </article>
+      </section>
+
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <article class="main-article">
+        <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+        <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
+        <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p></article>
+      </section>
+
+      <section class="main-section" id="Declaring_variables">
+        <header>Declaring variables</header>
+        <article class="main-article">
+          <p>You can declare a variable in three ways:</p>
+          <p>With the keyword var. For example,</p>
+          <code>var x = 42.</code>
+          <p>This syntax can be used to declare both local and global variables.</p>
+          <p>By simply assigning it a value. For example,</p>
+          <code>x = 42.</code>
+          <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.</p>
+          <p>With the keyword let. For example,</p>
+          <code>let y = 13.</code>
+          <p>This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
+          </article>
+      </section>
+
+      <section class="main-section" id="Variable_scope">
+        <header>Variable scope</header>
+        <article class="main-article">
+          <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+          <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
+          <code>if (true) { var x = 5; } console.log(x); // 5</code>
+          <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
+          <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is
+not defined</code>
+          </article>
+      </section>
+
+      <section class="main-section" id="Global_variables">
+        <header>Global variables</header>
+        <article class="main-article">
+          <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
+          <p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
+          </article>
+      </section>
+
+      <section class="main-section" id="Constants">
+        <header>Constants</header>
+        <article class="main-article">
+          <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.<p>
+<code>const PI = 3.14;</code>
+<p>A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
+<p>The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</p>
+<p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
+<code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
+WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;
+//statements }</code>
+<p>However, object attributes are not protected, so the following statement is executed without problems.</p>
+<code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+"otherValue";</code>
+          </article>
+      </section>
+
+      <section class="main-section" id="Data_types">
+        <header>Data types</header>
+        <article class="main-article">
+          <p>The latest ECMAScript standard defines seven data types:</p>
+<ul>
+<li>
+  <p>Six data types that are primitives:</p>
+  <ul>
+<li>Boolean. true and false.</li>
+<li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+<li>undefined. A top-level property whose value is undefined.</li>
+<li>Number. 42 or 3.14159.</li>
+<li>String. "Howdy"</li>
+<li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+</ul>
+<li>and Object</li>
+<p>Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform.</p>
+          </article>
+      </section>
+
+      <section class="main-section" id="if...else_statement">
+        <header>if...else statement</header>
+        <article class="main-article">
+          <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:</p>
+<code>if (condition) { statement_1; } else { statement_2; }</code>
+<p>condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.</p>
+<p>You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:</p>
+<code>if (condition_1) { statement_1; } else if (condition_2) {
+statement_2; } else if (condition_n) { statement_n; } else {
+statement_last; }</code>
+<p>In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:</p>
+<code>if (condition) { statement_1_runs_if_condition_is_true;
+statement_2_runs_if_condition_is_true; } else {
+statement_3_runs_if_condition_is_false;
+statement_4_runs_if_condition_is_false; }</code>
+<p>It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:</p>
+<code>if (x = y) { /* statements here */ }</code>
+<p>If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:</p>
+<code>if ((x = y)) { /* statements here */ }</code>
+</article>
+      </section>
+
+      <section class="main-section" id="while_statement">
+        <header>while statement</header>
+        <article class="main-article">
+          <p>A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:</p>
+<code>while (condition) statement</code>
+<p>If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.</p>
+<p>The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops and control is passed to the statement following while.</p>
+<p>To execute multiple statements, use a block statement ({ ... }) to group those statements.</p>
+<p>Example:</p>
+<p>The following while loop iterates as long as n is less than three:</p>
+<code>var n = 0; var x = 0; while (n < 3) { n++; x += n; }</code>
+<p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:</p>
+<ul>
+<li>After the first pass: n = 1 and x = 1</li>
+<li>After the second pass: n = 2 and x = 3</li>
+<li>After the third pass: n = 3 and x = 6</li>
+</ul>
+<p>After completing the third pass, the condition n < 3 is no longer true, so the loop terminates.</p>
+          </article>
+      </section>
+
+      <section class="main-section" id="Function_declarations">
+        <header>Function declarations</header>
+        <article class="main-article">
+          <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
+          <ul>
+<li>The name of the function.</li>
+<li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+<li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+</ul>
+<p>For example, the following code defines a simple function named square:</p>
+<code>function square(number) { return number * number; }</code>
+<p>The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.</p>
+<code>return number * number;</code>
+<p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
+          </article>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article class="main-article">
+          <ul>
+            <li>All the documentation in this page is taken from <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN</a></li>
             </ul>
-            <p class="note"><strong>Note:</strong> Simple attribute values that don't contain ASCII whitespace (or any of the characters <span class="character">"</span> <span class="character">'</span> <span class="character">`</span> <span class="character">=</span> <span class="character"><</span> <span class="character">></span>) can remain unquoted,
-                but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.</p>
-            <h3>Nesting elements</h3>
-            <p>You can put elements inside other elements too, this is called <strong>nesting</strong>. 
-            If we wanted to state that our cat is <strong>very</strong> grumpy, we could wrap the word "very" in a 
-            <span class="tag-name">&lt;strong&gt;</span> element, which means that the word is to be strongly emphasized:</p>
-            <code><span class="tag-name">&lt;p&gt;</span>My cat is <span class="tag-name">&lt;strong&gt;</span>very<span class="tag-name">&lt;/strong&gt;</span> grumpy<span class="tag-name">&lt;/p&gt;</span></code>
-            <p>You do however need to make sure your elements are properly nested. In the example above, 
-                we opened the <span class="tag-name">&lt;p&gt;</span> element first, then the <span class="tag-name">&lt;strong&gt;</span> element; 
-                therefore, we have to close the <span class="tag-name">&lt;strong&gt;</span> element first, then the 
-                <span class="tag-name">&lt;p&gt;</span> element. The following is incorrect:
-            </p>
-            <code id="incorrect-code"><span class="tag-name">&lt;p&gt;</span>My cat is <span class="tag-name">&lt;strong&gt;</span>very grumpy.<span class="tag-name">&lt;/p&gt;</span><span class="tag-name">&lt;/strong&gt;</span></code>
-            <p>The elements have to open and close correctly so that they are clearly inside or outside one another.
-                If they overlap as shown above, then your web browser will try to make the best guess at what you 
-                were trying to say, which can lead to unexpected results. So don't do it!</p>
-            <h3>Empty elements</h3>
-            <p>Some elements have no content and are called <strong>empty elements</strong>. Take the <span class="tag-name">&lt;img&gt;</span> element as an example:</p>
-            <code><span class="tag-name">&lt;img <span class="attr-name">src</span>="images/firefox-icon.png" <span class="attr-name">alt</span>="my test image"&gt;</span></code>
-            <p>This contains two attributes, but there is no closing tag and no inner content.
-                This is because an image element doesn't wrap content to affect it. Its purpose is to embed an image 
-                in the HTML page in the place it appears.</p>
-        </section>
-        <!-- End_Anatomy_of_an_html_element_section -->
-        <!-- Start_html_Document_Section -->
-        <section class="main-section" id="html_document">
-            <header>HTML document</header>
-            <p>HTML document wraps up the basics of individual HTML elements, but they aren't handy on their own, they are combined to form 
-                an entire HTML page. Here we have the following:</p>
-            <ul>
-                <li>
-                    <span class="tag-name">&lt;!DOCTYPE html&gt;</span> &mdash; doctype. It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctype were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly.
-                </li>
-                <li>
-                    The <span class="tag-name">&lt;html&gt;</span> element. This element wraps all the content on the entire page and is sometimes known as the root element. It includes the <strong>lang</strong> attribute, setting the primary language of the document.
-                </li>
-                <li>
-                    The <span class="tag-name">&lt;head&gt;</span> element. This element acts as container for all the staff you want to include in the document 
-                    like its title, scripts and style sheets.
-                </li>
-                <li>
-                    <span class="tag-name">&lt;meta charset="utf-8"&gt;</span> &mdash; This element sets the character set your document should use to UTF-8 which includes 
-                    most characters from the vast majority of written languages.
-                </li>
-                <li>
-                    <span class="tag-name">&lt;meta name="viewport" content="width=device-width"&gt;</span> &mdash; This viewport element ensures the page renders at the width of viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
-                </li>
-                <li>
-                    The <span class="tag-name">&lt;title&gt;</span> element. This defines the document's title that is shown in a browser's title bar or page's tab.
-                </li>
-                <li>
-                    The <span class="tag-name">&lt;body&gt;</span> element. This contains all the content that you want to show to web users when they visit 
-                    your page.
-                </li>
-            </ul>
-            <code><span class="tag-name">&lt;!DOCTYPE <span class="attr-name">html</span>&gt;</span><br><span class="tag-name">&lt;html <span class="attr-name">lang</span>="en-US"&gt;</span><br>&emsp;&emsp;<span class="tag-name">&lt;head&gt;</span><br>&emsp;&emsp;&emsp;&emsp;<span class="tag-name">&lt;meta <span class="attr-name">charset</span>="utf-8"&gt;</span><br>&emsp;&emsp;&emsp;&emsp;<span class="tag-name">&lt;meta <span class="attr-name">name</span>="viewport" <span class="attr-name">content</span>="width=device-width"&gt;</span><br>&emsp;&emsp;&emsp;&emsp;<span class="tag-name">&lt;title&gt;</span>My test page<span class="tag-name">&lt;/title&gt;</span><br>&emsp;&emsp;<span class="tag-name">&lt;/head&gt;</span><br>&emsp;&emsp;<span class="tag-name">&lt;body&gt;</span><br>&emsp;&emsp;&emsp;&emsp;<span class="tag-name">&lt;p&gt;</span>My cat is very grumpy<span class="tag-name">&lt;/p&gt;</span><br>&emsp;&emsp;<span class="tag-name">&lt;/body&gt;</span><br><span class="tag-name">&lt;/html&gt;</span></code>
-        </section>
-        <!-- End_html_Document_Section -->
-        <!-- Start_Headings_Section -->
-        <section class="main-section" id="headings">
-            <header>Headings</header>
-            <p>Heading elements allow you to specify that certain parts of your content are headings or subheadings. 
-                HTML contains 6 heading levels: <span class="tag-name">&lt;h1&gt;</span> is the highest section level and <span class="tag-name">&lt;h6&gt;</span> is the lowest, 
-                although you'll commonly only use 3 to 4 at most:
-            </p>
-            <code><span class="comment">&lt;!-- 4 heading levels: --&gt;</span><br><br><span class="tag-name">&lt;h1&gt;</span>My main title<span class="tag-name">&lt;/h1&gt;</span><br><span class="tag-name">&lt;h2&gt;</span>My top level heading<span class="tag-name">&lt;/h2&gt;</span><br><span class="tag-name">&lt;h3&gt;</span>My subheading<span class="tag-name">&lt;/h3&gt;</span><br><span class="tag-name">&lt;h4&gt;</span>My sub-subheading<span class="tag-name">&lt;/h4&gt;</span></code>
-            <p class="note"><strong>Note:</strong> Anything in HTML between <span class="character">&lt;! &ndash; &ndash;</span> and <span class="character">&ndash; &ndash; &gt;</span> is an <strong>HTML comment</strong>. The browser 
-                ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.</p>
-        </section>
-        <!-- End_Headings_Section -->
-        <!-- Start_Paragraphs_Section -->
-        <section class="main-section" id="paragraphs">
-            <header>Paragraphs</header>
-            <p>As explained above, <span class="tag-name">&lt;p&gt;</span> elements are for containing paragraphs of text; you'll use these frequently 
-                when marking up regular text content:</p>
-                <code><span class="tag-name">&lt;p&gt;</span>This is a single paragraph<span class="tag-name">&lt;/p&gt;</span></code>
-        </section>
-        <!-- End_Paragraphs_Section -->
-        <!-- Start_Lists_Section -->
-        <section class="main-section" id="lists">
-            <header>Lists</header>
-            <p>Lists in HTML are used to represent an item in a list and the most common list types are ordered and unordered lists:</p>
-            <ol>
-                <li>
-                    <strong>Unordered lists</strong> are for lists where the order of the items doesn't matter and these wrapped in an <span class="tag-name">&lt;ul&gt;</span> element.
-                </li>
-                <li>
-                    <strong>Ordered lists</strong> are for lists where the order of the items does matter and these wrapped in an <span class="tag-name">&lt;ol&gt;</span> element.
-                </li>
-            </ol>
-            <p>Each item inside the lists is put inside an <span class="tag-name">&lt;li&gt;</span> element; for example, if we wanted to turn the part 
-                of the following paragraph fragment into a list</p>
-            <code><span class="tag-name">&lt;p&gt;</span>At Mozilla, we're a global community of technologists, thinkers, and builders working together…<span class="tag-name">&lt;/p&gt;</span></code>
-            <p>We could modify the markup to this:</p>
-            <code><span class="tag-name">&lt;p&gt;</span>At Mozilla, we're a global community of<span class="tag-name">&lt;/p&gt;</span><br><br><span class="tag-name">&lt;ul&gt;</span><br>&emsp;&emsp;&emsp;<span class="tag-name">&lt;li&gt;</span>technologists<span class="tag-name">&lt;/li&gt;</span><br>&emsp;&emsp;&emsp;<span class="tag-name">&lt;li&gt;</span>thinkers<span class="tag-name">&lt;/li&gt;</span><br>&emsp;&emsp;&emsp;<span class="tag-name">&lt;li&gt;</span>builders<span class="tag-name">&lt;/li&gt;</span><br><span class="tag-name">&lt;/ul&gt;</span><br><br><span class="tag-name">&lt;p&gt;</span>working together...<span class="tag-name">&lt;/p&gt;</span></code>
-        </section>
-        <!-- End_Lists_Section -->
-        <!-- Start_links_Section -->
-        <section class="main-section" id="links">
-            <header>Links</header>
-            <p>The <span class="tag-name">&lt;a&gt;</span> element (or anchor element), with its <strong>href attribute</strong> creates a hyperlink 
-                to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
-                To make text within your paragraph into a link, follow these steps:
-            </p>
-            <ol>
-                <li>Choose some text. We chose the text "Mozilla Manifesto".</li>
-                <li>Wrap the text in an <span class="tag-name">&lt;a&gt;</span> element, as shown bellow:</li>
-                <code><span class="tag-name">&lt;a&gt;</span>Mozilla Manifesto<span class="tag-name">&lt;/a&gt;</span></code>
-                <li>Give the <span class="tag-name">&lt;a&gt;</span> element an <strong>href</strong> attribute, as shown below:</li>
-                <code><span class="tag-name">&lt;a <span class="attr-name">href</span>=""&gt;</span>Mozilla Manifesto<span class="tag-name">&lt;/a&gt;</span></code>
-                <li>Fill in the value of this attribute with the web address that you want the link to:</li>
-                <code><span class="tag-name">&lt;a <span class="attr-name">href</span>="https://www.mozilla.org/en-US/about/manifesto/"&gt;</span>Mozilla Manifesto<span class="tag-name">&lt;/a&gt;</span></code>
-            </ol>
-            <p>You might get unexpected results if you omit the <strong>https://</strong> or <strong>http://</strong> 
-                part, called the protocol, at the beginning of the web address. After making a link, 
-                click it to make sure it is sending you where you wanted it to.</p>
-        </section>
-        <!-- End_links_Section -->
-        <!-- Start_reference_Section -->
-        <section class="main-section" id="reference">
-            <header>Reference</header>
-            <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">MDN</a> and 
-                it is only covering the basics of HTML, to find out more go to <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank">Learning HTML</a> topic.
-            </p>
-        </section>
-        <!-- End_reference_Section -->
+          </article>
+      </section>
+      <p id="creator">This page Recreated by <a href="https://github.com/Nevin06">Nevin06</a></p>
     </main>
-</body>
+  </body>
 </html>
